@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aashish Chavan — Personal Technology Portfolio
+
+Premium personal website for **Aashish Chavan** — Software Engineer, Technology Entrepreneur, and CEO of WEBCRAFTERA LLP.
+
+## Tech Stack
+
+- **Next.js** (App Router)
+- **React** + **TypeScript**
+- **Tailwind CSS** v4
+- **Framer Motion** (animations)
+- **Lucide React** + **React Icons** (iconography)
+- **MongoDB** (contact form storage, optional)
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
+cp .env.example .env.local  # Add your MongoDB connection string
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Variable | Description |
+|---|---|
+| `MONGODB_URI` | MongoDB connection string (server-side only) |
+| `MONGODB_DB` | MongoDB database name (default: `aashishchavan`) |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Never commit `.env` files.** Only `.env.example` with placeholder values is committed.
 
-## Learn More
+## Adding a Profile Image
 
-To learn more about Next.js, take a look at the following resources:
+Place a professional photo at `public/images/profile.webp` and uncomment the Image component in `components/hero/Hero.tsx`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Adding Projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Edit the `projects` array in `components/projects/Projects.tsx` to add real work.
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy to **Vercel** — set environment variables in the Vercel dashboard.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+© 2026 Aashish Chavan. All rights reserved.
