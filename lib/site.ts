@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Aashish Chavan",
-  title: "Aashish Chavan | CEO, Software Engineer & Flask Developer",
+  title: "Aashish Chavan | Software Engineer, CEO & Flask Developer",
   description:
-    "Aashish Chavan is the CEO of WEBCRAFTERA LLP, a Software Engineer, Software Developer, and Flask Developer building modern web and software solutions.",
+    "Aashish Chavan, CEO of WEBCRAFTERA LLP. Software Engineer & Flask Developer building scalable web apps, REST APIs & AI solutions with React, Next.js, Python & Flask. Maharashtra, India.",
   url: "https://aashishchavan.com",
   email: "aashishchavan7620@gmail.com",
   phone: "+91 9226653349",
