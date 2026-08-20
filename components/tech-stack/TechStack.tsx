@@ -26,7 +26,7 @@ import {
   SiDocker,
   SiPostman,
 } from "react-icons/si";
-import { Code2, Cloud, Workflow, Boxes, Brain, Sparkles, Terminal, Bot } from "lucide-react";
+import { Code2, Cloud, Workflow, Boxes, Brain, Sparkles, Terminal, Bot, BookOpen } from "lucide-react";
 import type { IconType } from "react-icons";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -145,6 +145,41 @@ export function TechStack() {
               </div>
             </Reveal>
           ))}
+
+          {/* Currently Learning row */}
+          <Reveal delay={0.35}>
+            <div className="flex flex-col gap-3 border-t border-accent/20 pt-6 sm:flex-row sm:items-center sm:gap-10">
+              <div className="shrink-0 sm:w-44">
+                <div className="flex items-center gap-2">
+                  <BookOpen className="h-3.5 w-3.5 text-accent" />
+                  <span className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
+                    Exploring Now
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2 sm:gap-3">
+                {[
+                  "LangChain",
+                  "LLM Integration",
+                  "Kubernetes",
+                  "System Design",
+                  "Advanced ML",
+                  "Agentic AI",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-2 rounded-lg border border-accent/25 bg-accent-soft px-3 py-2 sm:rounded-xl sm:px-4 sm:py-2.5"
+                  >
+                    <span className="relative flex h-1.5 w-1.5 shrink-0">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+                      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent" />
+                    </span>
+                    <span className="text-xs font-semibold text-accent sm:text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
