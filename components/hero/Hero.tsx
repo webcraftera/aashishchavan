@@ -252,8 +252,8 @@ export function Hero() {
               variants={itemVariants}
               className="mt-10 grid grid-cols-3 gap-3 border-t border-border-subtle pt-7 sm:mt-12 sm:gap-6 sm:pt-8"
             >
-              <StatCounter value={3}  suffix="+" label="Years Building"    delay={700}  />
-              <StatCounter value={20} suffix="+" label="Projects Shipped"  delay={900}  />
+              <StatCounter value={1}  suffix="+" label="Years Building"    delay={700}  />
+              <StatCounter value={2}  suffix="+" label="Projects Shipped"  delay={900}  />
               <StatCounter value={15} suffix="+" label="Technologies"      delay={1100} />
             </motion.div>
 
