@@ -131,23 +131,23 @@ export function Contact() {
             <Reveal delay={0.2}>
               <div className="mt-8 space-y-3">
                 {contactInfo.map((info) => (
-                  <div key={info.label} className="group flex items-center gap-4 rounded-xl border border-border-subtle bg-surface p-4 card-hover">
+                  <div key={info.label} className="group flex items-start gap-4 rounded-xl border border-border-subtle bg-surface p-4 card-hover">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-2 text-text-secondary transition-colors group-hover:bg-accent-soft group-hover:text-accent">
                       <info.icon className="h-5 w-5" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="font-mono text-xs uppercase tracking-[0.2em] text-text-tertiary">
                         {info.label}
                       </p>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-sm font-medium transition-colors hover:text-accent"
+                          className="text-sm font-medium transition-colors hover:text-accent break-words"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-sm font-medium">{info.value}</p>
+                        <p className="text-sm font-medium break-words leading-relaxed">{info.value}</p>
                       )}
                     </div>
                   </div>
@@ -236,7 +236,7 @@ export function Contact() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3 text-sm font-medium text-white transition-all hover:bg-accent-hover hover:shadow-xl hover:shadow-accent/20 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
+                  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-white shadow-md shadow-accent/25 ring-1 ring-accent/20 transition-all hover:bg-accent-hover hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5 active:scale-[0.97] disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:w-auto"
                 >
                   {status === "loading" ? (
                     <>

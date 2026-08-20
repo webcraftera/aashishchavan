@@ -35,7 +35,7 @@ export function Footer() {
                 {siteConfig.name}
               </p>
             </div>
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/60">
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/50">
               Software Engineer & CEO of WEBCRAFTERA LLP. Building modern web solutions with React, Next.js, Node.js, Flask, AI & Machine Learning. Turning ideas into innovative digital experiences.
             </p>
             <div className="mt-5 flex gap-2.5">
@@ -46,7 +46,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-white/60 transition-all hover:border-accent/40 hover:bg-accent/15 hover:text-accent"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/12 text-white/50 transition-all hover:border-accent/50 hover:bg-accent/20 hover:text-accent"
                 >
                   <social.icon className="h-4 w-4" />
                 </a>
@@ -103,7 +103,7 @@ export function Footer() {
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/40">
                   Office Address
                 </p>
-                <p className="text-sm leading-relaxed text-white/60">
+                <p className="text-sm leading-relaxed text-white/60 break-words">
                   {siteConfig.location}
                 </p>
               </li>

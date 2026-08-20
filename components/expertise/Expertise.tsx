@@ -39,22 +39,23 @@ export function Expertise() {
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {expertise.map((item, i) => (
             <Reveal key={item.name} delay={i * 0.03}>
               <div className="group relative h-full overflow-hidden rounded-2xl border border-border-subtle bg-surface p-5 card-hover">
-                <div className="flex flex-col gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-surface-2 text-text-secondary transition-all group-hover:bg-accent-soft group-hover:text-accent">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.04] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="relative flex flex-col gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-surface-2 text-text-secondary transition-all duration-300 group-hover:bg-accent/15 group-hover:text-accent group-hover:shadow-md group-hover:shadow-accent/20">
                     <item.icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold">{item.name}</p>
+                    <p className="text-sm font-bold">{item.name}</p>
                     <p className="mt-0.5 font-mono text-xs text-text-tertiary">
                       {item.category}
                     </p>
                   </div>
                 </div>
-                <span className="absolute right-4 top-4 font-mono text-xs text-text-tertiary/30">
+                <span className="absolute right-4 top-4 font-mono text-[11px] font-semibold text-text-tertiary/25">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>

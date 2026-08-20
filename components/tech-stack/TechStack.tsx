@@ -125,20 +125,20 @@ export function TechStack() {
         <div className="mt-12 space-y-6">
           {categories.map((cat, ci) => (
             <Reveal key={cat.label} delay={ci * 0.05}>
-              <div className="flex flex-col gap-4 border-t border-border-subtle pt-6 sm:flex-row sm:items-center sm:gap-10">
+              <div className="flex flex-col gap-3 border-t border-border-subtle pt-6 sm:flex-row sm:items-center sm:gap-10">
                 <div className="shrink-0 sm:w-44">
                   <span className="font-mono text-xs uppercase tracking-[0.2em] text-text-tertiary">
                     {cat.label}
                   </span>
                 </div>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 sm:gap-3">
                   {cat.items.map((item) => (
                     <div
                       key={item.name}
-                      className="group flex items-center gap-2.5 rounded-xl border border-border-subtle bg-surface px-4 py-2.5 card-hover"
+                      className="group flex items-center gap-2 rounded-lg border border-border-subtle bg-surface px-3 py-2 card-hover sm:rounded-xl sm:px-4 sm:py-2.5"
                     >
-                      <item.icon className="h-5 w-5 text-text-secondary transition-colors group-hover:text-accent" />
-                      <span className="text-sm font-medium">{item.name}</span>
+                      <item.icon className="h-4 w-4 text-text-secondary transition-colors group-hover:text-accent sm:h-5 sm:w-5" />
+                      <span className="text-xs font-medium sm:text-sm sm:gap-2.5">{item.name}</span>
                     </div>
                   ))}
                 </div>

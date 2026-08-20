@@ -21,7 +21,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
 
       {/* Accent glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 h-[500px] w-[700px] rounded-full bg-accent/[0.07] blur-[140px] animate-pulse-glow" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 h-[400px] w-[500px] max-w-[120vw] rounded-full bg-accent/[0.07] blur-[140px] animate-pulse-glow" />
 
       <div className="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
@@ -31,13 +31,13 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2.5 rounded-full border border-border-subtle bg-surface/60 px-4 py-2 backdrop-blur-sm"
+              className="inline-flex items-center gap-3 rounded-full border border-accent/20 bg-accent-soft px-4 py-2 ring-1 ring-accent/10"
             >
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
               </span>
-              <span className="text-xs font-medium text-text-secondary">
+              <span className="text-xs font-semibold tracking-wide text-accent">
                 Software Engineer • Technology Entrepreneur
               </span>
             </motion.div>
@@ -47,7 +47,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-8 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
+              className="mt-8 font-display text-5xl font-extrabold leading-[1.04] tracking-tight sm:text-6xl lg:text-7xl xl:text-[5rem]"
             >
               Building Technology.
               <br />
@@ -59,7 +59,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-6 max-w-xl text-base leading-relaxed text-text-secondary sm:text-lg"
+              className="mt-6 max-w-xl text-base leading-relaxed text-text-secondary sm:text-[1.0625rem]"
             >
               I&apos;m Aashish Chavan, a Software Engineer, Software Developer,
               Flask Developer, and CEO of WEBCRAFTERA LLP. I build practical,
@@ -95,12 +95,12 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-10 flex items-center gap-3 text-sm text-text-secondary"
+              className="mt-10 flex flex-wrap items-center gap-3 text-sm text-text-secondary"
             >
               <span className="font-mono text-xs text-accent">{"//"}</span>
               <span>CEO — WEBCRAFTERA LLP</span>
-              <span className="h-3 w-px bg-border-subtle" />
-              <span className="text-text-tertiary">Kannad, Maharashtra</span>
+              <span className="hidden h-3 w-px bg-border-subtle sm:block" />
+              <span className="hidden text-text-tertiary sm:inline">Kannad, Maharashtra</span>
             </motion.div>
           </div>
 
@@ -112,7 +112,7 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="relative mx-auto max-w-sm"
             >
-              <div className="relative aspect-square overflow-hidden rounded-3xl border border-border-subtle bg-surface card-hover">
+              <div className="relative aspect-square overflow-hidden rounded-3xl border border-border-subtle bg-surface card-premium ring-1 ring-border-subtle">
                 {/* Profile photo */}
                 <Image
                   src="/images/profile.png"
@@ -124,7 +124,7 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-surface/90 via-transparent to-transparent" />
 
                 {/* Terminal-style overlay */}
-                <div className="absolute inset-0 flex flex-col justify-between p-5">
+                <div className="absolute inset-0 flex flex-col justify-between p-4 sm:p-5">
                   <div className="flex items-center justify-between">
                     <div className="flex gap-1.5">
                       <div className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
@@ -135,12 +135,12 @@ export function Hero() {
                   </div>
 
                   <div className="space-y-1 font-mono text-xs text-white/70">
-                    <div><span className="text-accent">const</span> engineer = {"{"}</div>
-                    <div className="pl-4">name: <span className="text-white/90">&apos;Aashish Chavan&apos;</span>,</div>
-                    <div className="pl-4">role: <span className="text-white/90">&apos;CEO&apos;</span>,</div>
-                    <div className="pl-4">company: <span className="text-white/90">&apos;WEBCRAFTERA&apos;</span>,</div>
-                    <div className="pl-4">stack: <span className="text-white/90">[&apos;Python&apos;, &apos;Flask&apos;]</span>,</div>
-                    <div className="text-accent">{"}"}</div>
+                    <div><span className="text-accent/90">const</span> <span className="text-white/80">engineer</span> = {"{"}&#160;</div>
+                    <div className="pl-4"><span className="text-white/50">name:</span> <span className="text-white/90">&apos;Aashish Chavan&apos;</span>,</div>
+                    <div className="pl-4"><span className="text-white/50">role:</span> <span className="text-white/90">&apos;CEO&apos;</span>,</div>
+                    <div className="pl-4"><span className="text-white/50">stack:</span> <span className="text-white/90">[&apos;React&apos;, &apos;Flask&apos;, &apos;AI&apos;]</span>,</div>
+                    <div className="pl-4"><span className="text-white/50">status:</span> <span className="text-green-400/90">&apos;available&apos;</span>,</div>
+                    <div className="text-accent/90">{"}"}&#160;</div>
                   </div>
 
                   <div className="flex items-center justify-between border-t border-white/10 pt-3">
@@ -154,7 +154,7 @@ export function Hero() {
               </div>
 
               {/* Floating accent card */}
-              <div className="absolute -bottom-5 -left-5 glass rounded-2xl border border-border-subtle p-3.5 shadow-xl animate-float">
+              <div className="absolute -bottom-5 left-2 sm:-left-5 glass rounded-2xl border border-border-subtle p-3.5 shadow-xl animate-float">
                 <div className="flex items-center gap-2.5">
                   <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent/10">
                     <span className="font-mono text-xs font-semibold text-accent">AC</span>

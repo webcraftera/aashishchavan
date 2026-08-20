@@ -10,7 +10,7 @@ export function Webcraftera() {
     <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl border border-border-subtle bg-surface p-8 sm:p-12 lg:p-16 card-hover">
+          <div className="relative overflow-hidden rounded-3xl border border-border-subtle bg-surface p-8 sm:p-12 lg:p-16 card-premium">
             {/* Background */}
             <div className="absolute inset-0 bg-grid opacity-[0.1]" />
             <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-accent/[0.04] blur-[100px]" />
@@ -30,7 +30,7 @@ export function Webcraftera() {
                   </div>
                 </div>
 
-                <h2 className="mt-6 font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
+                <h2 className="mt-6 font-display text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl lg:leading-[1.1]">
                   Leading WEBCRAFTERA LLP
                 </h2>
 
@@ -65,13 +65,13 @@ export function Webcraftera() {
                   <div className="mt-4 space-y-3">
                     {[
                       { label: "Name", value: "WEBCRAFTERA LLP" },
-                      { label: "Role", value: "Chief Executive Officer" },
+                      { label: "Role", value: "CEO & Founder" },
                       { label: "Focus", value: "Digital Solutions" },
                       { label: "Location", value: "Maharashtra, India" },
                     ].map((row) => (
-                      <div key={row.label} className="flex justify-between text-sm">
-                        <span className="text-text-secondary">{row.label}</span>
-                        <span className="font-medium">{row.value}</span>
+                      <div key={row.label} className="flex justify-between gap-4 text-sm">
+                        <span className="shrink-0 text-xs font-mono uppercase tracking-wider text-text-tertiary">{row.label}</span>
+                        <span className="text-right text-sm font-semibold">{row.value}</span>
                       </div>
                     ))}
                   </div>

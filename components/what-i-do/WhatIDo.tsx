@@ -57,17 +57,18 @@ export function WhatIDo() {
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
             <Reveal key={service.title} delay={i * 0.05}>
               <div className="group relative h-full overflow-hidden rounded-2xl border border-border-subtle bg-surface p-6 card-hover">
-                <span className="absolute right-5 top-5 font-mono text-xs text-text-tertiary/40">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.03] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <span className="absolute right-5 top-5 font-mono text-[11px] font-semibold text-text-tertiary/30">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-accent transition-all duration-300 group-hover:scale-110 group-hover:bg-accent/10">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-accent transition-all duration-300 group-hover:scale-110 group-hover:bg-accent/15 group-hover:shadow-lg group-hover:shadow-accent/20">
                   <service.icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-5 text-base font-semibold tracking-tight">
+                <h3 className="mt-5 text-base font-bold tracking-tight">
                   {service.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-text-secondary">

@@ -50,7 +50,7 @@ export function About() {
 
           <div className="lg:col-span-5">
             <Reveal delay={0.2}>
-              <div className="flex flex-col items-center rounded-3xl border border-border-subtle bg-surface p-8 card-hover sm:p-10">
+              <div className="flex flex-col items-center rounded-3xl border border-border-subtle bg-surface p-8 card-premium sm:p-10">
                 <div className="relative h-44 w-44 overflow-hidden rounded-full ring-2 ring-border-subtle ring-offset-4 ring-offset-surface sm:h-52 sm:w-52">
                   <Image
                     src="/images/profile.png"
@@ -60,8 +60,8 @@ export function About() {
                     priority
                   />
                 </div>
-                <p className="mt-6 text-xl font-bold tracking-tight">Aashish Chavan</p>
-                <p className="mt-1 text-sm text-text-secondary">CEO, WEBCRAFTERA LLP</p>
+                <p className="mt-6 text-xl font-extrabold tracking-tight">Aashish Chavan</p>
+                <p className="mt-1 text-sm font-medium text-accent">CEO, WEBCRAFTERA LLP</p>
 
                 <h3 className="mt-10 w-full font-mono text-xs uppercase tracking-[0.2em] text-text-tertiary">
                   Focus Areas
@@ -70,7 +70,7 @@ export function About() {
                   {focusAreas.map((area) => (
                     <span
                       key={area}
-                      className="rounded-lg border border-border-subtle bg-surface-2 px-3 py-1.5 text-sm text-text-secondary transition-all hover:border-accent/30 hover:text-foreground"
+                      className="rounded-lg border border-border-subtle bg-surface-2 px-3 py-1.5 text-xs font-medium text-text-secondary transition-all hover:border-accent/30 hover:bg-accent-soft hover:text-accent"
                     >
                       {area}
                     </span>
@@ -87,7 +87,7 @@ export function About() {
                     <div key={item.label} className="flex items-start gap-3">
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                       <div>
-                        <p className="text-sm font-medium">{item.label}</p>
+                        <p className="text-sm font-bold">{item.label}</p>
                         <p className="text-sm text-text-secondary">{item.value}</p>
                       </div>
                     </div>

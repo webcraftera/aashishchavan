@@ -48,10 +48,9 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "border-b border-border-subtle"
+            ? "navbar-scrolled border-b border-border-subtle shadow-sm"
             : "border-b border-transparent"
         }`}
-        style={scrolled ? { backgroundColor: "#ffffff" } : undefined}
       >
         <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <a
@@ -67,9 +66,9 @@ export function Navbar() {
               alt="Aashish Chavan"
               width={28}
               height={28}
-              className="rounded-full ring-1 ring-border-subtle"
+              className="rounded-full ring-1 ring-border-subtle shrink-0"
             />
-            {siteConfig.name}
+            <span className="truncate">{siteConfig.name}</span>
           </a>
 
           <div className="hidden items-center gap-1 md:flex">
@@ -81,7 +80,7 @@ export function Navbar() {
                   e.preventDefault();
                   handleNavClick(item.href);
                 }}
-                className="flex items-center gap-2 rounded-lg px-3.5 py-2 text-sm text-text-secondary transition-all hover:bg-surface-2 hover:text-foreground"
+                className="flex items-center gap-2 rounded-lg px-3.5 py-2 text-sm font-medium text-text-secondary transition-all hover:bg-surface-2 hover:text-foreground"
               >
                 {(() => {
                   const Icon = navIcons[item.href];
@@ -121,7 +120,7 @@ export function Navbar() {
             className="absolute inset-0 bg-background/80 backdrop-blur-sm"
             onClick={() => setMobileOpen(false)}
           />
-          <div className="absolute left-0 right-0 top-16 border-b border-border-subtle" style={{ backgroundColor: "#ffffff" }}>
+          <div className="absolute left-0 right-0 top-16 border-b border-border-subtle navbar-scrolled">
             <div className="flex flex-col gap-1 px-4 py-4">
               {siteConfig.nav.map((item) => (
                 <a
