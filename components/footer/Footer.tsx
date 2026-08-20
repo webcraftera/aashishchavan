@@ -21,8 +21,8 @@ export function Footer() {
   return (
     <footer className="border-t border-white/10 text-white" style={{ backgroundColor: "#101826" }}>
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="lg:col-span-2">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+          <div className="sm:col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2.5">
               <Image
                 src="/favicon.ico"
@@ -83,7 +83,7 @@ export function Footer() {
                 </p>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="text-sm text-white/60 transition-colors hover:text-white"
+                  className="break-all text-sm text-white/60 transition-colors hover:text-white"
                 >
                   {siteConfig.email}
                 </a>

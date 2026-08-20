@@ -28,14 +28,6 @@ const technologies = [
   "TailwindCSS", "Git",
 ];
 
-const currentlyLearning = [
-  "LangChain",
-  "LLM Integration",
-  "Kubernetes",
-  "System Design",
-  "Advanced ML",
-];
-
 function StatCounter({
   value,
   suffix,
@@ -69,7 +61,7 @@ function StatCounter({
 
   return (
     <div>
-      <p className="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
+      <p className="font-display text-2xl font-extrabold tracking-tight sm:text-3xl md:text-4xl">
         {count}
         <span className="text-accent">{suffix}</span>
       </p>
@@ -197,7 +189,7 @@ export function Hero() {
           >
             {/* Badge */}
             <motion.div variants={itemVariants}>
-              <span className="inline-flex items-center gap-3 rounded-full border border-accent/20 bg-accent-soft px-4 py-2 ring-1 ring-accent/10">
+              <span className="inline-flex flex-wrap items-center gap-2 rounded-full border border-accent/20 bg-accent-soft px-4 py-2 ring-1 ring-accent/10 sm:flex-nowrap sm:gap-3">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
@@ -211,7 +203,7 @@ export function Hero() {
             {/* Headline – slide in per line */}
             <motion.h1
               variants={itemVariants}
-              className="mt-8 font-display text-5xl font-extrabold leading-[1.04] tracking-tight sm:text-6xl lg:text-7xl xl:text-[5rem]"
+              className="mt-8 font-display text-4xl font-extrabold leading-[1.04] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem]"
             >
               <motion.span
                 initial={{ opacity: 0, x: -28 }}
@@ -234,7 +226,7 @@ export function Hero() {
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="mt-6 max-w-xl text-base leading-relaxed text-text-secondary sm:text-[1.0625rem]"
+              className="mt-6 max-w-xl text-sm leading-relaxed text-text-secondary sm:text-base sm:text-[1.0625rem]"
             >
               I&apos;m Aashish Chavan — Software Engineer, Flask Developer, and CEO
               of WEBCRAFTERA LLP. I build scalable, reliable digital products that
@@ -258,7 +250,7 @@ export function Hero() {
             {/* Animated stat counters */}
             <motion.div
               variants={itemVariants}
-              className="mt-12 grid grid-cols-3 gap-4 border-t border-border-subtle pt-8 sm:gap-6"
+              className="mt-10 grid grid-cols-3 gap-3 border-t border-border-subtle pt-7 sm:mt-12 sm:gap-6 sm:pt-8"
             >
               <StatCounter value={3}  suffix="+" label="Years Building"    delay={700}  />
               <StatCounter value={20} suffix="+" label="Projects Shipped"  delay={900}  />
@@ -284,31 +276,6 @@ export function Hero() {
                 ))}
               </div>
             </motion.div>
-
-            {/* Currently Learning */}
-            <motion.div variants={itemVariants} className="mt-5">
-              <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.18em] text-text-tertiary">
-                {"// Currently Exploring"}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {currentlyLearning.map((tech, i) => (
-                  <motion.span
-                    key={tech}
-                    initial={{ opacity: 0, scale: 0.82 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: 1.75 + i * 0.07 }}
-                    className="inline-flex items-center gap-1.5 rounded-md border border-accent/25 bg-accent-soft px-2.5 py-1 text-xs font-semibold text-accent"
-                  >
-                    <motion.span
-                      animate={{ opacity: [1, 0.3, 1] }}
-                      transition={{ duration: 1.8, repeat: Infinity, delay: i * 0.3 }}
-                      className="h-1.5 w-1.5 rounded-full bg-accent"
-                    />
-                    {tech}
-                  </motion.span>
-                ))}
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Right: profile card */}
@@ -318,7 +285,7 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.88, y: 40 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1.0, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="relative mx-auto max-w-sm"
+              className="relative mx-auto max-w-[340px] pb-10 sm:max-w-sm sm:pb-0 lg:pb-10"
             >
               {/* Pulsing glow ring behind card */}
               <motion.div

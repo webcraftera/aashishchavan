@@ -10,7 +10,7 @@ export function Webcraftera() {
     <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl border border-border-subtle bg-surface p-8 sm:p-12 lg:p-16 card-premium">
+          <div className="relative overflow-hidden rounded-3xl border border-border-subtle bg-surface p-5 sm:p-10 lg:p-16 card-premium">
             {/* Background */}
             <div className="absolute inset-0 bg-grid opacity-[0.1]" />
             <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-accent/[0.04] blur-[100px]" />
@@ -69,9 +69,9 @@ export function Webcraftera() {
                       { label: "Focus", value: "Digital Solutions" },
                       { label: "Location", value: "Maharashtra, India" },
                     ].map((row) => (
-                      <div key={row.label} className="flex justify-between gap-4 text-sm">
+                      <div key={row.label} className="flex justify-between gap-3 text-sm">
                         <span className="shrink-0 text-xs font-mono uppercase tracking-wider text-text-tertiary">{row.label}</span>
-                        <span className="text-right text-sm font-semibold">{row.value}</span>
+                        <span className="min-w-0 break-words text-right text-xs font-semibold sm:text-sm">{row.value}</span>
                       </div>
                     ))}
                   </div>

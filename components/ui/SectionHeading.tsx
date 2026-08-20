@@ -26,7 +26,7 @@ export function SectionHeading({
           </span>
         </div>
       )}
-      <h2 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-[3rem] lg:leading-[1.1]">
+      <h2 className="font-display text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-[3rem] lg:leading-[1.1]">
         {title}
       </h2>
       {description && (
